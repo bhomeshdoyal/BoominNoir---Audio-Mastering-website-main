@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: boominnoir-masterlab
+    runtime: docker
+    healthCheckPath: /health
+    plan: free

@@ -1,0 +1,14 @@
+Open your terminal (Command Prompt or PowerShell) and run:
+
+Bash
+cd backend
+pip install -r requirements.txt
+4. Launch the Studio
+Bash
+python -m uvicorn main:app --reload
+5. Access the Web Console
+Open your browser and navigate to:
+
+Plaintext
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+Drag and drop your mix, choose your preset, and click Engage Mastering.

@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BoominNoir MASTERLAB STUDIO</title>
+
+    <meta
+        name="description"
+        content="BoominNoir MASTERLAB STUDIO — professional-style audio mastering."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         GLOBAL BACKGROUND
+    ====================================== -->
+
+    <div class="noise"></div>
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div>
+
+                <div class="brand-name">
+                    BOOMINNOIR
+                </div>
+
+                <div class="brand-sub">
+                    MASTERLAB STUDIO
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#studio">
+                Studio
+            </a>
+
+            <a href="#mastering">
+                Mastering
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="system-status">
+
+            <span></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main id="studio">
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero">
+
+            <canvas id="particles"></canvas>
+
+            <div class="hero-grid"></div>
+
+
+            <div class="hero-content">
+
+
+                <!-- EYEBROW -->
+
+                <div class="eyebrow">
+
+                    <span class="live-dot"></span>
+
+                    AUDIO MASTERING ENGINE
+
+                </div>
+
+
+
+                <!-- HERO TITLE -->
+
+                <h1>
+
+                    MAKE YOUR
+
+                    <span class="gradient-text">
+                        MUSIC
+                    </span>
+
+                    <br>
+
+                    SOUND
+
+                    <span class="outline-text">
+                        FINISHED.
+                    </span>
+
+                </h1>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <p class="hero-description">
+
+                    Professional-style mastering designed to make your
+                    tracks hit harder, sound cleaner and translate across
+                    headphones, cars, clubs and speakers.
+
+                </p>
+
+
+
+                <!-- =================================
+                     UPLOAD CARD
+                ================================== -->
+
+                <div
+                    class="master-card"
+                    id="uploadZone"
+                >
+
+
+                    <!-- CARD HEADER -->
+
+                    <div class="card-top">
+
+                        <div class="mini-brand">
+                            MASTERLAB
+                        </div>
+
+
+                        <div class="card-status">
+
+                            <span></span>
+
+                            READY
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- UPLOAD AREA -->
+
+                    <div class="upload-center">
+
+
+                        <!-- ORB -->
+
+                        <div class="orb">
+
+                            <div
+                                class="orb-ring ring-one"
+                            ></div>
+
+                            <div
+                                class="orb-ring ring-two"
+                            ></div>
+
+                            <div
+                                class="orb-ring ring-three"
+                            ></div>
+
+
+                            <div class="orb-core">
+
+                                <div class="upload-arrow">
+                                    ↑
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- UPLOAD TEXT -->
+
+                        <div class="upload-title">
+                            Drop your track
+                        </div>
+
+
+                        <div class="upload-subtitle">
+                            or select an audio file
+                        </div>
+
+
+
+                        <!-- UPLOAD BUTTON -->
+
+                        <button
+                            class="upload-button"
+                            id="uploadButton"
+                            type="button"
+                        >
+                            SELECT TRACK
+                        </button>
+
+
+
+                        <!-- FILE INPUT -->
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept=".wav,.mp3,.flac,.ogg,.m4a"
+                            hidden
+                        >
+
+                    </div>
+
+
+
+                    <!-- SUPPORTED FORMATS -->
+
+                    <div class="card-footer">
+
+                        <span>WAV</span>
+                        <span>MP3</span>
+                        <span>FLAC</span>
+                        <span>OGG</span>
+                        <span>M4A</span>
+
+                    </div>
+
+
+
+                    <!-- ANIMATED WAVE -->
+
+                    <div class="wave-container">
+                        <svg
+                            class="fluid-wave"
+                            viewBox="0 0 1600 220"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="masterWaveGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="0%"
+                                >
+                                    <stop offset="0%" stop-color="#d946ef" />
+                                    <stop offset="35%" stop-color="#8b5cf6" />
+                                    <stop offset="65%" stop-color="#6366f1" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+
+                                <linearGradient
+                                    id="masterWaveGlow"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="0%"
+                                >
+                                    <stop offset="0%" stop-color="#d946ef" />
+                                    <stop offset="50%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#3b82f6" />
+                                </linearGradient>
+
+                                <filter
+                                    id="masterWaveBlur"
+                                    x="-20%"
+                                    y="-80%"
+                                    width="140%"
+                                    height="260%"
+                                >
+                                    <feGaussianBlur stdDeviation="12" />
+                                </filter>
+                            </defs>
+
+                            <path
+                                class="fluid-wave-glow"
+                                d="
+                                    M0 145
+                                    C90 125 160 90 250 108
+                                    C340 127 400 166 500 151
+                                    C610 135 670 72 770 88
+                                    C870 104 910 160 1010 145
+                                    C1110 130 1170 73 1270 91
+                                    C1370 110 1450 157 1600 115
+                                    L1600 220
+                                    L0 220
+                                    Z
+                                "
+                            />
+
+                            <path
+                                class="fluid-wave-main"
+                                d="
+                                    M0 145
+                                    C90 125 160 90 250 108
+                                    C340 127 400 166 500 151
+                                    C610 135 670 72 770 88
+                                    C870 104 910 160 1010 145
+                                    C1110 130 1170 73 1270 91
+                                    C1370 110 1450 157 1600 115
+                                    L1600 220
+                                    L0 220
+                                    Z
+                                "
+                            />
+                        </svg>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+            <!-- SIDE LABEL -->
+
+            <div class="vertical-label">
+
+                BOOMINNOIR / AUDIO ENGINE / 001
+
+            </div>
+
+
+
+            <!-- SCROLL INDICATOR -->
+
+            <div class="scroll-indicator">
+
+                <span></span>
+
+                SCROLL TO EXPLORE
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             MASTERING SECTION
+        ====================================== -->
+
+        <section
+            class="mastering-section"
+            id="mastering"
+        >
+
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-header">
+
+
+                <div class="section-number">
+                    01 / MASTER
+                </div>
+
+
+                <h2>
+
+                    <span class="static-title">
+                        YOUR TRACK.
+                    </span>
+
+                    <br>
+
+                    <span id="rotatingTitle">
+                        YOUR SOUND.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Upload your track, choose the character you want,
+                    then let the mastering engine process your music.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PRESETS
+            ================================== -->
+
+            <div class="preset-grid">
+
+
+                <!-- BALANCED -->
+
+                <button
+                    class="preset"
+                    data-preset="balanced"
+                    type="button"
+                >
+
+                    <span class="preset-number">
+                        01
+                    </span>
+
+                    <strong>
+                        BALANCED
+                    </strong>
+
+                    <small>
+                        Clean & natural
+                    </small>
+
+                </button>
+
+
+
+                <!-- CLEAN -->
+
+                <button
+                    class="preset"
+                    data-preset="clean"
+                    type="button"
+                >
+
+                    <span class="preset-number">
+                        02
+                    </span>
+
+                    <strong>
+                        CLEAN
+                    </strong>
+
+                    <small>
+                        Transparent dynamics
+                    </small>
+
+                </button>
+
+
+
+                <!-- LOUD -->
+
+                <button
+                    class="preset"
+                    data-preset="loud"
+                    type="button"
+                >
+
+                    <span class="preset-number">
+                        03
+                    </span>
+
+                    <strong>
+                        LOUD
+                    </strong>
+
+                    <small>
+                        Maximum impact
+                    </small>
+
+                </button>
+
+
+
+                <!-- CLUB -->
+
+                <button
+                    class="preset"
+                    data-preset="club"
+                    type="button"
+                >
+
+                    <span class="preset-number">
+                        04
+                    </span>
+
+                    <strong>
+                        CLUB
+                    </strong>
+
+                    <small>
+                        Heavy low end
+                    </small>
+
+                </button>
+
+
+
+                <!-- DARK -->
+
+                <button
+                    class="preset"
+                    data-preset="dark"
+                    type="button"
+                >
+
+                    <span class="preset-number">
+                        05
+                    </span>
+
+                    <strong>
+                        DARK
+                    </strong>
+
+                    <small>
+                        Deep & atmospheric
+                    </small>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 MASTER ACTION
+            ================================== -->
+
+            <div class="master-action">
+
+                <button
+                    id="masterButton"
+                    class="master-button"
+                    type="button"
+                    disabled
+                >
+
+                    <span>
+                        MASTER TRACK
+                    </span>
+
+                    <span class="master-arrow">
+                        ↗
+                    </span>
+
+                </button>
+
+
+                <div class="master-hint">
+
+                    Upload a track, choose your sound,
+                    then start mastering.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PROCESSING ENGINE
+            ================================== -->
+
+            <div
+                class="processing-panel"
+                id="processingPanel"
+            >
+
+
+                <!-- PROCESSING HEADER -->
+
+                <div class="processing-header">
+
+                    <span>
+                        MASTERING ENGINE
+                    </span>
+
+                    <span id="processingStatus">
+                        READY
+                    </span>
+
+                </div>
+
+
+
+                <!-- PROCESSING VISUAL -->
+
+                <div class="processing-visual">
+
+
+                    <div class="processing-ring"></div>
+
+
+                    <div class="processing-text">
+
+                        <span id="processingPercent">
+                            00
+                        </span>
+
+                        <small>
+                            %
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROCESSING EQUALIZER -->
+
+                <div class="processing-bars">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RESULTS
+            ================================== -->
+
+            <div
+                class="results"
+                id="results"
+            >
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="results-heading">
+
+                    <span>
+                        MASTER COMPLETE
+                    </span>
+
+                    <div></div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     BEFORE / AFTER PLAYER
+                ================================== -->
+
+                <div
+                    class="comparison-player"
+                    id="comparisonPlayer"
+                >
+
+
+                    <!-- COMPARISON TOP -->
+
+                    <div class="comparison-top">
+
+
+                        <div>
+
+                            <label>
+                                BEFORE / ORIGINAL
+                            </label>
+
+
+                            <div
+                                class="track-name"
+                                id="originalName"
+                            >
+                                Your track
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BEFORE / AFTER SWITCH -->
+
+                        <div class="comparison-switch">
+
+
+                            <button
+                                id="beforeButton"
+                                class="comparison-button active"
+                                type="button"
+                            >
+                                BEFORE
+                            </button>
+
+
+                            <button
+                                id="afterButton"
+                                class="comparison-button"
+                                type="button"
+                            >
+                                AFTER
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- AUDIO -->
+
+                    <div class="comparison-audio">
+
+
+                        <!-- ORIGINAL -->
+
+                        <audio
+                            id="originalAudio"
+                            controls
+                            preload="auto"
+                        ></audio>
+
+
+
+                        <!-- MASTERED -->
+
+                        <audio
+                            id="masteredAudio"
+                            controls
+                            preload="auto"
+                        ></audio>
+
+                    </div>
+
+
+
+                    <!-- COMPARISON FOOTER -->
+
+                    <div class="comparison-bottom">
+
+
+                        <div class="comparison-status">
+
+                            <span class="comparison-dot"></span>
+
+                            <span id="comparisonStatus">
+                                ORIGINAL VERSION
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- DOWNLOAD -->
+
+                        <a
+                            id="downloadButton"
+                            class="download-button"
+                            download
+                        >
+
+                            DOWNLOAD MASTER
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FEATURES
+        ====================================== -->
+
+        <section
+            class="features"
+            id="about"
+        >
+
+
+            <!-- FEATURE 01 -->
+
+            <div class="feature">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    DEEP LOW END
+                </h3>
+
+                <p>
+
+                    Powerful bass while keeping
+                    the mix controlled and clean.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- FEATURE 02 -->
+
+            <div class="feature">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    CONTROLLED DYNAMICS
+                </h3>
+
+                <p>
+
+                    Increase impact without crushing
+                    the life out of your track.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- FEATURE 03 -->
+
+            <div class="feature">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    STEREO IMPACT
+                </h3>
+
+                <p>
+
+                    Designed to make your production
+                    translate across different
+                    listening systems.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+            BOOMINNOIR
+        </div>
+
+
+        <div class="footer-center">
+            MASTERLAB STUDIO
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Bhomesh Doyal / BoominNoir.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
